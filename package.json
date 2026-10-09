@@ -1,0 +1,38 @@
+{
+  "name": "ddd-brasil",
+  "version": "1.0.0",
+  "description": "Consulte os 67 DDDs do Brasil por número, cidade ou UF e valide telefones fixos, celulares, 0800 e serviços.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "bin": {
+    "ddd": "./bin/ddd.js"
+  },
+  "files": [
+    "src",
+    "bin"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "ddd",
+    "telefone",
+    "celular",
+    "validacao",
+    "brasil",
+    "uf",
+    "pt-br"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micdog22/ddd-brasil.git"
+  },
+  "homepage": "https://micdog22.github.io/ddd-brasil/"
+}

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DDD Brasil — consulte DDDs e valide telefones</title>
+  <meta name="description" content="Consulte os 67 DDDs do Brasil por número, cidade ou UF e valide telefones fixos, celulares, 0800 e números de serviço.">
+  <meta name="theme-color" content="#6d28d9">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📞</text></svg>">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./demo.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>DDD Brasil</h1>
+    <p class="lead">Consulte os 67 DDDs do Brasil e valide números de telefone.</p>
+  </header>
+
+  <main>
+    <div class="two-columns">
+      <section class="card" aria-labelledby="search-title">
+        <h2 id="search-title">Consultar DDD</h2>
+        <label for="search">DDD, cidade ou UF</label>
+        <input id="search" type="search" value="19" autocomplete="off" spellcheck="false" aria-describedby="search-hint" aria-controls="search-result">
+        <p id="search-hint" class="hint">Ex.: 19, Limeira, SP ou Minas Gerais. A busca por cidade considera as principais cidades de cada DDD.</p>
+        <div id="search-result" class="result" aria-live="polite"></div>
+      </section>
+
+      <section class="card" aria-labelledby="phone-title">
+        <h2 id="phone-title">Validar telefone</h2>
+        <label for="phone">Número de telefone</label>
+        <input id="phone" type="tel" value="(19) 99999-9999" autocomplete="off" aria-describedby="phone-hint" aria-controls="phone-result">
+        <p id="phone-hint" class="hint">Celular, fixo, 0800 ou serviço (190, 192…). Pode incluir +55 ou o 0 da operadora.</p>
+        <div id="phone-result" class="result" aria-live="polite"></div>
+      </section>
+    </div>
+
+    <section class="card" aria-labelledby="all-title">
+      <h2 id="all-title">Todos os DDDs por região</h2>
+      <div id="all-codes"></div>
+    </section>
+
+    <section class="card" aria-labelledby="usage-title">
+      <h2 id="usage-title">Use no seu projeto</h2>
+      <p>Biblioteca JavaScript sem dependências, para Node.js e navegador, com linha de comando.</p>
+      <pre><code>npm install github:micdog22/ddd-brasil
+
+import { buscarDDD, buscarCidade, validarTelefone } from 'ddd-brasil';
+
+buscarDDD(19).cidades;           // ['Campinas', 'Piracicaba', 'Limeira', ...]
+buscarCidade('limeira');         // [{ cidade: 'Limeira', uf: 'SP', estado: 'São Paulo', ddd: 19 }]
+validarTelefone('19999999999');  // { valido: true, tipo: 'celular', formatado: '(19) 99999-9999', ... }</code></pre>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Tudo roda no seu navegador. Código aberto no <a href="https://github.com/micdog22/ddd-brasil">GitHub</a> · Licença MIT</p>
+  </footer>
+</body>
+</html>
