@@ -1,4 +1,4 @@
-# DDD Brasil — consulte DDDs e valide telefones brasileiros (JavaScript • Node.js)
+# DDD Brasil: consulte DDDs e valide telefones brasileiros (JavaScript • Node.js)
 
 Biblioteca sem dependências com os 67 DDDs do Brasil (UF, estado, região e principais cidades) e um validador de telefones que entende celular, fixo, 0800 e números de serviço como 190 e 192. Serve para formulários de cadastro, limpeza de bases de contatos e qualquer sistema que precise saber de onde é um número. Acompanha uma linha de comando e uma página de demonstração.
 
@@ -124,4 +124,4 @@ Issues e pull requests são bem-vindos.
 
 ## Licença
 
-MIT — veja [LICENSE](LICENSE).
+MIT. Veja [LICENSE](LICENSE).
